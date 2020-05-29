@@ -1,0 +1,74 @@
+# This file defines all dimensions and parameters
+# values for your problem :
+
+# Initial and final time :
+time.free string none
+time.initial double 0
+time.final double 20
+
+# Dimensions :
+state.dimension integer 4
+control.dimension integer 2
+algebraic.dimension integer 0
+parameter.dimension integer 0
+constant.dimension integer 10
+boundarycond.dimension integer 7
+constraint.dimension integer 3
+
+# Discretization :
+discretization.steps integer 2000
+discretization.method string lobatto
+
+# Optimization :
+optimization.type string single
+batch.type integer 0
+batch.index integer 0
+batch.nrange integer 1
+batch.lowerbound double 0
+batch.upperbound double 0
+batch.directory string none
+
+# Initialization :
+initialization.type string from_init_file
+initialization.file string none
+
+# Parameter identification :
+paramid.type string false
+paramid.separator string ,
+paramid.file string no_directory
+paramid.dimension integer 0
+
+# Names :
+state.0 string s(t)
+state.1 string i(t)
+state.2 string m(t)
+state.3 string j(t)
+control.0 string u(t)
+control.1 string v(t)
+boundarycond.0 string s(0)
+boundarycond.1 string i(0)
+boundarycond.2 string m(0)
+boundarycond.3 string j(0)
+boundarycond.4 string s(T)
+boundarycond.5 string i(T)
+boundarycond.6 string m(T)
+constraint.0 string -s
+constraint.1 string -i
+constraint.2 string -m
+constant.0 string b
+constant.1 string c
+constant.2 string a_1
+constant.3 string a_2
+constant.4 string eta
+constant.5 string g_1
+constant.6 string g_2
+constant.7 string A
+constant.8 string B
+constant.9 string C
+
+# Solution file :
+solution.file string SIMR_Pinho_case1
+
+# Iteration output frequency :
+iteration.output.frequency integer 0
+
