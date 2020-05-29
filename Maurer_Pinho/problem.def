@@ -1,0 +1,80 @@
+# This file defines all dimensions and parameters
+# values for your problem :
+
+# Initial and final time :
+time.free string none
+time.initial double 0
+time.final double 20
+
+# Dimensions :
+state.dimension integer 7
+control.dimension integer 1
+algebraic.dimension integer 0
+parameter.dimension integer 0
+constant.dimension integer 7
+boundarycond.dimension integer 8
+constraint.dimension integer 9
+
+# Discretization :
+discretization.steps integer 1000
+discretization.method string midpoint
+
+# Optimization :
+optimization.type string single
+batch.type integer 0
+batch.index integer 0
+batch.nrange integer 1
+batch.lowerbound double 0
+batch.upperbound double 0
+batch.directory string none
+
+# Initialization :
+initialization.type string from_init_file
+initialization.file string none
+
+# Parameter identification :
+paramid.type string false
+paramid.separator string ,
+paramid.file string no_directory
+paramid.dimension integer 0
+
+# Names :
+state.0 string S
+state.1 string E
+state.2 string I
+state.3 string N
+state.4 string R
+state.5 string W
+state.6 string J
+control.0 string u
+boundarycond.0 string S0
+boundarycond.1 string E0
+boundarycond.2 string I0
+boundarycond.3 string N0
+boundarycond.4 string R0
+boundarycond.5 string W0
+boundarycond.6 string J0
+boundarycond.7 string WT
+constraint.0 string conservation
+constraint.1 string constraint.1
+constraint.2 string -E
+constraint.3 string -I
+constraint.4 string -N
+constraint.5 string -R
+constraint.6 string -W
+constraint.7 string -J
+constraint.8 string uS-V
+constant.0 string b
+constant.1 string c
+constant.2 string a
+constant.3 string e
+constant.4 string g
+constant.5 string B
+constant.6 string d
+
+# Solution file :
+solution.file string Maurer_Model
+
+# Iteration output frequency :
+iteration.output.frequency integer 0
+
