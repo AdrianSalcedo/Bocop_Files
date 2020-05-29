@@ -1,0 +1,79 @@
+# This file defines all dimensions and parameters
+# values for your problem :
+
+# Initial and final time :
+time.free string none
+time.initial double 0
+time.final double 100
+
+# Dimensions :
+state.dimension integer 7
+control.dimension integer 1
+algebraic.dimension integer 0
+parameter.dimension integer 0
+constant.dimension integer 7
+boundarycond.dimension integer 7
+constraint.dimension integer 9
+
+# Discretization :
+discretization.steps integer 1500
+discretization.method string gauss
+
+# Optimization :
+optimization.type string single
+batch.type integer 0
+batch.index integer 0
+batch.nrange integer 1
+batch.lowerbound double 0
+batch.upperbound double 0
+batch.directory string none
+
+# Initialization :
+initialization.type string from_init_file
+initialization.file string none
+
+# Parameter identification :
+paramid.type string false
+paramid.separator string ,
+paramid.file string no_directory
+paramid.dimension integer 0
+
+# Names :
+state.0 string S(t)
+state.1 string I(t)
+state.2 string I_a(t)
+state.3 string I_s(t)
+state.4 string R(t)
+state.5 string V(t)
+state.6 string x_aux(t)
+control.0 string u(t):
+boundarycond.0 string boundarycond.0
+boundarycond.1 string I(0)
+boundarycond.2 string I_a(0)
+boundarycond.3 string I_s(0)
+boundarycond.4 string R(0)
+boundarycond.5 string V(0)
+boundarycond.6 string x_aux(0)
+constraint.0 string S+I+R+V=1
+constraint.1 string -S
+constraint.2 string -I
+constraint.3 string -I_a
+constraint.4 string -I_s
+constraint.5 string -R
+constraint.6 string -V
+constraint.7 string -x_aux
+constraint.8 string I
+constant.0 string beta
+constant.1 string alpha
+constant.2 string p
+constant.3 string rho
+constant.4 string gamma
+constant.5 string d
+constant.6 string mu
+
+# Solution file :
+solution.file string Covid_new_variable_v1
+
+# Iteration output frequency :
+iteration.output.frequency integer 0
+
